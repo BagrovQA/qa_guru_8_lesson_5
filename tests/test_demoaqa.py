@@ -2,7 +2,7 @@ import os
 from selene import browser, have, command
 
 
-def test_Positive_Student_Registration_Form():
+def test_registration_form():
     browser.open("/automation-practice-form")
     browser.element("#firstName").type("Anton")
     browser.element("#lastName").type("Bagrov")
