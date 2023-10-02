@@ -16,8 +16,8 @@ def test_Positive_Student_Registration_Form():
     browser.element("#subjectsInput").type("Com")
     browser.all(".subjects-auto-complete__menu-list").first.click()
     browser.element("[for='hobbies-checkbox-3']").click()
-    browser.element("#uploadPicture").send_keys(os.path.abspath('tests/bug-ficha.jpg'))
-    browser.element("#currentAddress").type("some text")
+    browser.element("#uploadPicture").send_keys(os.path.abspath('pic/bug-ficha.jpg'))
+    browser.element("#currentAddress").type("Slovenia,1000 Ljubljana,Cesta na Loko 19")
     browser.element('[id="stateCity-label"]').perform(command.js.scroll_into_view)
     browser.element("#state").click()
     browser.all(". css-1uccc91-singleValue").element_by(have.text("Haryana")).click()
@@ -34,6 +34,6 @@ def test_Positive_Student_Registration_Form():
         'Computer Science',
         'Music',
         'bug-ficha.jpg',
-        'some text',
+        'Slovenia,1000 Ljubljana,Cesta na Loko 19',
         'Haryana Panipat'
     ))
